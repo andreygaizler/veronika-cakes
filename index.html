@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Cakes by Veronica — homemade cakes to order. Message on WhatsApp." />
+  <title>Cakes by Veronica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home" data-tab="home" data-i18n="brand">Cakes by Veronica</a>
+    <div class="header-actions">
+      <button
+        class="lang-switch"
+        type="button"
+        id="lang-switch"
+        data-i18n-aria="langSwitchAria"
+        aria-label="Switch language to Hebrew"
+      >
+        <span data-i18n="otherLabel">עב</span>
+      </button>
+      <button class="nav-toggle" type="button" data-i18n-aria="menuOpen" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" data-i18n-aria-label="menuLabel" aria-label="Main menu">
+        <button type="button" class="nav-link is-active" data-tab="home" data-i18n="navHome">Home</button>
+        <button type="button" class="nav-link" data-tab="about" data-i18n="navAbout">About</button>
+        <button type="button" class="nav-link" data-tab="cakes" data-i18n="navCakes">Cakes</button>
+        <button type="button" class="nav-link" data-tab="order" data-i18n="navOrder">Order</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="tab-panel is-active" data-panel="home">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="brand" data-i18n="brand">Cakes by Veronica</p>
+          <h1 data-i18n="heroTitle">Homemade cakes with character</h1>
+          <p class="lead" data-i18n="heroLead">
+            Baked to order: delicate flavors, careful decoration, and a taste you’ll want again.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#order" data-tab="order" data-i18n="ctaOrder">Order on WhatsApp</a>
+            <a class="btn btn-ghost" href="#cakes" data-tab="cakes" data-i18n="ctaCakes">See the cakes</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-glow"></div>
+          <img
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80"
+            alt=""
+            width="1200"
+            height="1500"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="tab-panel" data-panel="about" hidden>
+      <div class="page">
+        <p class="eyebrow" data-i18n="aboutEyebrow">About</p>
+        <h2 data-i18n="aboutTitle">Hi, I’m Veronica</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p data-i18n="aboutP1">
+              I bake cakes at home with care for every detail and flavor. For me, each cake should be not only beautiful, but truly delicious — soft sponge, rich cream, and neat decoration.
+            </p>
+            <p data-i18n="aboutP2">
+              I take orders for birthdays, family celebrations, and cozy occasions when you want something special. We’ll choose the flavor, size, and design — and I’ll bake a cake for your day.
+            </p>
+            <ul class="facts">
+              <li data-i18n="fact1">Fresh ingredients only</li>
+              <li data-i18n="fact2">Custom decoration</li>
+              <li data-i18n="fact3">Order via WhatsApp</li>
+            </ul>
+          </div>
+          <figure class="about-photo">
+            <img
+              src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=80"
+              data-i18n-alt="aboutPhotoAlt"
+              alt="Homemade cake on a celebration table"
+              width="900"
+              height="1100"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="cakes" class="tab-panel" data-panel="cakes" hidden>
+      <div class="page">
+        <p class="eyebrow" data-i18n="cakesEyebrow">Gallery</p>
+        <h2 data-i18n="cakesTitle">Cakes</h2>
+        <p class="section-lead" data-i18n="cakesLead">
+          My work. We’ll pick the flavor, size, and décor for your celebration — just message on WhatsApp.
+        </p>
+        <div class="cake-gallery">
+          <article class="cake-card">
+            <div class="cake-photo">
+              <img src="images/cake-03-cream-pearls.jpg" data-i18n-alt="cake3Alt" alt="Cream cake with golden pearl décor" width="1050" height="1400" loading="lazy" />
+            </div>
+            <div class="cake-info">
+              <h3 data-i18n="cake3Title">Cream with gold</h3>
+              <p data-i18n="cake3Desc">Neat cream décor and golden pearls.</p>
+            </div>
+          </article>
+          <article class="cake-card">
+            <div class="cake-photo">
+              <img src="images/cake-04-berry-cut.jpg" data-i18n-alt="cake4Alt" alt="Berry-filled cake cut open" width="1050" height="1400" loading="lazy" />
+            </div>
+            <div class="cake-info">
+              <h3 data-i18n="cake4Title">Berry</h3>
+              <p data-i18n="cake4Desc">Light sponge and rich berry filling.</p>
+            </div>
+          </article>
+          <article class="cake-card">
+            <div class="cake-photo">
+              <img src="images/cake-05-birthday.jpg" data-i18n-alt="cake5Alt" alt="Celebration cake with chocolate" width="1050" height="1400" loading="lazy" />
+            </div>
+            <div class="cake-info">
+              <h3 data-i18n="cake5Title">Celebration</h3>
+              <p data-i18n="cake5Desc">For birthdays and jubilees — with your décor.</p>
+            </div>
+          </article>
+          <article class="cake-card">
+            <div class="cake-photo">
+              <img src="images/cake-06-chocolate.jpg" data-i18n-alt="cake6Alt" alt="Chocolate cake with glaze" width="1050" height="1400" loading="lazy" />
+            </div>
+            <div class="cake-info">
+              <h3 data-i18n="cake6Title">Chocolate</h3>
+              <p data-i18n="cake6Desc">Rich chocolate and a glossy glaze.</p>
+            </div>
+          </article>
+          <article class="cake-card">
+            <div class="cake-photo">
+              <img src="images/cake-07-classic.jpg" data-i18n-alt="cake7Alt" alt="Classic white cake with pearls" width="1050" height="1400" loading="lazy" />
+            </div>
+            <div class="cake-info">
+              <h3 data-i18n="cake7Title">Classic white</h3>
+              <p data-i18n="cake7Desc">Elegant cream with chocolate and gold pearls.</p>
+            </div>
+          </article>
+          <article class="cake-card">
+            <div class="cake-photo">
+              <img src="images/cake-01-strawberry.jpg" data-i18n-alt="cake1Alt" alt="Strawberry cake with fresh berries and mint" width="1050" height="1400" loading="lazy" />
+            </div>
+            <div class="cake-info">
+              <h3 data-i18n="cake1Title">Strawberry</h3>
+              <p data-i18n="cake1Desc">Fresh strawberries, mint, and light cream.</p>
+            </div>
+          </article>
+          <article class="cake-card cake-card-wide">
+            <div class="cake-photo">
+              <img src="images/cake-02-strawberry-cut.jpg" data-i18n-alt="cake2Alt" alt="Strawberry cake cut open" width="1050" height="1400" loading="lazy" />
+            </div>
+            <div class="cake-info">
+              <h3 data-i18n="cake2Title">Strawberry, cut</h3>
+              <p data-i18n="cake2Desc">Soft sponge, cream, and berry filling.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="order" class="tab-panel" data-panel="order" hidden>
+      <div class="page order-page">
+        <p class="eyebrow" data-i18n="orderEyebrow">Order & payment</p>
+        <h2 data-i18n="orderTitle">How to order</h2>
+        <p class="section-lead" data-i18n="orderLead">
+          Message me on WhatsApp: we’ll discuss the date, flavor, size, and décor. After we agree — a deposit, then I bake your cake.
+        </p>
+
+        <ol class="steps">
+          <li>
+            <strong data-i18n="step1Title">Message on WhatsApp</strong>
+            <span data-i18n="step1Desc">Tell me the date, how many people, and which flavor you’d like.</span>
+          </li>
+          <li>
+            <strong data-i18n="step2Title">We agree on details</strong>
+            <span data-i18n="step2Desc">We’ll choose the filling, design, and price.</span>
+          </li>
+          <li>
+            <strong data-i18n="step3Title">Payment</strong>
+            <span data-i18n="step3Desc">A deposit by transfer. I’ll send the details in chat.</span>
+          </li>
+        </ol>
+
+        <a
+          class="btn btn-primary btn-whatsapp"
+          id="whatsapp-link"
+          href="https://wa.me/972535314322"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n="whatsappBtn"
+        >
+          Message on WhatsApp
+        </a>
+        <p class="note" data-i18n="orderNote">Set your WhatsApp number in js/config.js.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="brand">Cakes by Veronica</p>
+    <a id="footer-whatsapp" href="https://wa.me/972535314322" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
