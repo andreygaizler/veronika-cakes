@@ -6,8 +6,6 @@
 
   const panels = Array.from(document.querySelectorAll("[data-panel]"));
   const navLinks = Array.from(document.querySelectorAll("[data-tab]"));
-  const nav = document.querySelector(".site-nav");
-  const toggle = document.querySelector(".nav-toggle");
   const langButtons = Array.from(document.querySelectorAll("[data-lang]"));
   const whatsappLink = document.getElementById("whatsapp-link");
   const footerWhatsapp = document.getElementById("footer-whatsapp");
@@ -79,12 +77,9 @@
       panel.classList.toggle("is-active", active);
     });
 
-    document.querySelectorAll(".nav-link").forEach((link) => {
+    document.querySelectorAll(".page-tab").forEach((link) => {
       link.classList.toggle("is-active", link.dataset.tab === tabId);
     });
-
-    if (nav) nav.classList.remove("is-open");
-    if (toggle) toggle.setAttribute("aria-expanded", "false");
 
     history.replaceState(null, "", `#${tabId}`);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -98,13 +93,6 @@
       showTab(tabId);
     });
   });
-
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", String(open));
-    });
-  }
 
   langButtons.forEach((btn) => {
     btn.addEventListener("click", () => {

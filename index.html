@@ -13,23 +13,19 @@
 <body>
   <header class="site-header">
     <a class="logo" href="#home" data-tab="home" data-i18n="brand">Cakes by Veronika</a>
-    <div class="header-actions">
-      <div class="lang-switch" role="group" data-i18n-aria="langSwitchAria" aria-label="Language">
-        <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" class="lang-btn" data-lang="he" aria-pressed="false">HE</button>
-        <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
-      </div>
-      <button class="nav-toggle" type="button" data-i18n-aria="menuOpen" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span>
-      </button>
-      <nav class="site-nav" data-i18n-aria-label="menuLabel" aria-label="Main menu">
-        <button type="button" class="nav-link is-active" data-tab="home" data-i18n="navHome">Home</button>
-        <button type="button" class="nav-link" data-tab="about" data-i18n="navAbout">About</button>
-        <button type="button" class="nav-link" data-tab="cakes" data-i18n="navCakes">Cakes</button>
-        <button type="button" class="nav-link" data-tab="order" data-i18n="navOrder">Order</button>
-      </nav>
+    <div class="lang-switch" role="group" data-i18n-aria="langSwitchAria" aria-label="Language">
+      <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="lang-btn" data-lang="he" aria-pressed="false">HE</button>
+      <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
     </div>
   </header>
+
+  <nav class="page-tabs" data-i18n-aria-label="menuLabel" aria-label="Main menu">
+    <button type="button" class="page-tab is-active" data-tab="home" data-i18n="navHome">Home</button>
+    <button type="button" class="page-tab" data-tab="about" data-i18n="navAbout">About</button>
+    <button type="button" class="page-tab" data-tab="cakes" data-i18n="navCakes">Cakes</button>
+    <button type="button" class="page-tab" data-tab="order" data-i18n="navOrder">Order</button>
+  </nav>
 
   <main>
     <section id="home" class="tab-panel is-active" data-panel="home">
@@ -40,11 +36,6 @@
           <p class="lead" data-i18n="heroLead">
             Baked to order: delicate flavors, careful decoration, and a taste you’ll want again.
           </p>
-          <nav class="home-tabs" data-i18n-aria-label="menuLabel" aria-label="Main menu">
-            <button type="button" class="home-tab" data-tab="about" data-i18n="navAbout">About</button>
-            <button type="button" class="home-tab" data-tab="cakes" data-i18n="navCakes">Cakes</button>
-            <button type="button" class="home-tab" data-tab="order" data-i18n="navOrder">Order</button>
-          </nav>
           <div class="cta-row">
             <a class="btn btn-primary" href="#order" data-tab="order" data-i18n="ctaOrder">Order on WhatsApp</a>
           </div>
