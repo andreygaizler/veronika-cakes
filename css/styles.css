@@ -84,28 +84,42 @@ code {
 }
 
 .lang-switch {
-  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.2rem;
   border: 1px solid var(--line);
+  border-radius: 0.85rem;
   background: rgba(255, 255, 255, 0.7);
-  color: var(--ink);
-  font: inherit;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  min-width: 2.75rem;
-  height: 2.5rem;
-  padding: 0 0.7rem;
-  border-radius: 0.75rem;
-  cursor: pointer;
-  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
-.lang-switch:hover,
-.lang-switch:focus-visible {
-  background: #fff;
-  border-color: rgba(184, 77, 106, 0.35);
+.lang-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  min-width: 2.1rem;
+  height: 2.1rem;
+  padding: 0 0.45rem;
+  border-radius: 0.65rem;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.lang-btn:hover,
+.lang-btn:focus-visible {
+  color: var(--ink);
+  background: rgba(184, 77, 106, 0.1);
   outline: none;
-  transform: translateY(-1px);
+}
+
+.lang-btn.is-active {
+  color: #fff;
+  background: var(--rose);
 }
 
 html[lang="he"] body {
@@ -262,6 +276,36 @@ html[dir="rtl"] .site-footer {
   color: var(--ink-soft);
   font-size: 1.05rem;
   max-width: 28rem;
+}
+
+.home-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0 0 1.25rem;
+}
+
+.home-tab {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding: 0.7rem 1.15rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.home-tab:hover,
+.home-tab:focus-visible {
+  color: var(--rose-dark);
+  background: #fff;
+  border-color: rgba(184, 77, 106, 0.35);
+  outline: none;
+  transform: translateY(-1px);
 }
 
 .cta-row {

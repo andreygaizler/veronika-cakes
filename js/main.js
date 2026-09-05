@@ -8,7 +8,7 @@
   const navLinks = Array.from(document.querySelectorAll("[data-tab]"));
   const nav = document.querySelector(".site-nav");
   const toggle = document.querySelector(".nav-toggle");
-  const langSwitch = document.getElementById("lang-switch");
+  const langButtons = Array.from(document.querySelectorAll("[data-lang]"));
   const whatsappLink = document.getElementById("whatsapp-link");
   const footerWhatsapp = document.getElementById("footer-whatsapp");
 
@@ -62,6 +62,12 @@
       if (key && pack[key] != null) el.setAttribute("aria-label", pack[key]);
     });
 
+    langButtons.forEach((btn) => {
+      const active = btn.dataset.lang === lang;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-pressed", String(active));
+    });
+
     applyWhatsApp(lang);
     localStorage.setItem(STORAGE_KEY, lang);
   }
@@ -100,13 +106,12 @@
     });
   }
 
-  if (langSwitch) {
-    langSwitch.addEventListener("click", () => {
-      const current = document.documentElement.lang || getSavedLang();
-      const next = (i18n.languages[current] && i18n.languages[current].otherLang) || "he";
-      applyLanguage(next);
+  langButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const lang = btn.dataset.lang;
+      if (lang && i18n.languages[lang]) applyLanguage(lang);
     });
-  }
+  });
 
   applyLanguage(getSavedLang());
 

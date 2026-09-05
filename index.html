@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Cakes by Veronica — homemade cakes to order. Message on WhatsApp." />
-  <title>Cakes by Veronica</title>
+  <meta name="description" content="Cakes by Veronika — homemade cakes to order. Message on WhatsApp." />
+  <title>Cakes by Veronika</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -12,17 +12,13 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="logo" href="#home" data-tab="home" data-i18n="brand">Cakes by Veronica</a>
+    <a class="logo" href="#home" data-tab="home" data-i18n="brand">Cakes by Veronika</a>
     <div class="header-actions">
-      <button
-        class="lang-switch"
-        type="button"
-        id="lang-switch"
-        data-i18n-aria="langSwitchAria"
-        aria-label="Switch language to Hebrew"
-      >
-        <span data-i18n="otherLabel">עב</span>
-      </button>
+      <div class="lang-switch" role="group" data-i18n-aria="langSwitchAria" aria-label="Language">
+        <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="he" aria-pressed="false">HE</button>
+        <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
+      </div>
       <button class="nav-toggle" type="button" data-i18n-aria="menuOpen" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span>
       </button>
@@ -39,23 +35,27 @@
     <section id="home" class="tab-panel is-active" data-panel="home">
       <div class="hero">
         <div class="hero-copy">
-          <p class="brand" data-i18n="brand">Cakes by Veronica</p>
-          <h1 data-i18n="heroTitle">Homemade cakes with character</h1>
+          <p class="brand" data-i18n="brand">Cakes by Veronika</p>
+          <h1 data-i18n="heroTitle">Homemade cakes for your celebration</h1>
           <p class="lead" data-i18n="heroLead">
             Baked to order: delicate flavors, careful decoration, and a taste you’ll want again.
           </p>
+          <nav class="home-tabs" data-i18n-aria-label="menuLabel" aria-label="Main menu">
+            <button type="button" class="home-tab" data-tab="about" data-i18n="navAbout">About</button>
+            <button type="button" class="home-tab" data-tab="cakes" data-i18n="navCakes">Cakes</button>
+            <button type="button" class="home-tab" data-tab="order" data-i18n="navOrder">Order</button>
+          </nav>
           <div class="cta-row">
             <a class="btn btn-primary" href="#order" data-tab="order" data-i18n="ctaOrder">Order on WhatsApp</a>
-            <a class="btn btn-ghost" href="#cakes" data-tab="cakes" data-i18n="ctaCakes">See the cakes</a>
           </div>
         </div>
         <div class="hero-visual" aria-hidden="true">
           <div class="hero-glow"></div>
           <img
-            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80"
+            src="images/cake-06.jpg"
             alt=""
-            width="1200"
-            height="1500"
+            width="1050"
+            height="1400"
           />
         </div>
       </div>
@@ -64,28 +64,44 @@
     <section id="about" class="tab-panel" data-panel="about" hidden>
       <div class="page">
         <p class="eyebrow" data-i18n="aboutEyebrow">About</p>
-        <h2 data-i18n="aboutTitle">Hi, I’m Veronica</h2>
+        <h2 data-i18n="aboutTitle">Hi, I’m Veronika</h2>
         <div class="about-grid">
           <div class="about-text">
             <p data-i18n="aboutP1">
-              I bake cakes at home with care for every detail and flavor. For me, each cake should be not only beautiful, but truly delicious — soft sponge, rich cream, and neat decoration.
+              Hi! I’m Veronika, I’m 11 years old, and I love making cakes!
             </p>
             <p data-i18n="aboutP2">
+              This has been my hobby for a long time, and I bake cakes for every family celebration and holiday.
+            </p>
+            <p data-i18n="aboutP3">
+              My favorite holiday is a birthday, and I love making and giving cakes to my friends and relatives!
+            </p>
+            <p data-i18n="aboutP4">
+              I make cakes from sponge layers soaked in syrup, seasonal berries (cherries, raspberries, strawberries, blueberries), and cream. For birthday décor, I make numbers out of chocolate.
+            </p>
+            <p data-i18n="aboutP5">
+              I’m sure you’ll love my cake!
+            </p>
+            <p data-i18n="aboutP6">
+              I bake cakes at home with care for every detail and flavor. For me, each cake should be not only beautiful, but truly delicious — soft sponge, rich cream, and neat decoration.
+            </p>
+            <p data-i18n="aboutP7">
               I take orders for birthdays, family celebrations, and cozy occasions when you want something special. We’ll choose the flavor, size, and design — and I’ll bake a cake for your day.
             </p>
             <ul class="facts">
-              <li data-i18n="fact1">Fresh ingredients only</li>
-              <li data-i18n="fact2">Custom decoration</li>
-              <li data-i18n="fact3">Order via WhatsApp</li>
+              <li data-i18n="fact1">Syrup-soaked sponge layers</li>
+              <li data-i18n="fact2">Seasonal berries and cream</li>
+              <li data-i18n="fact3">Chocolate numbers for birthdays</li>
+              <li data-i18n="fact4">Order via WhatsApp</li>
             </ul>
           </div>
           <figure class="about-photo">
             <img
-              src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=80"
+              src="images/cake-01.jpg"
               data-i18n-alt="aboutPhotoAlt"
               alt="Homemade cake on a celebration table"
-              width="900"
-              height="1100"
+              width="1050"
+              height="1400"
             />
           </figure>
         </div>
@@ -102,65 +118,74 @@
         <div class="cake-gallery">
           <article class="cake-card">
             <div class="cake-photo">
-              <img src="images/cake-03-cream-pearls.jpg" data-i18n-alt="cake3Alt" alt="Cream cake with golden pearl décor" width="1050" height="1400" loading="lazy" />
+              <img src="images/cake-01.jpg" data-i18n-alt="cake1Alt" alt="White birthday cake with gold candles and number 11" width="1050" height="1400" loading="lazy" />
             </div>
             <div class="cake-info">
-              <h3 data-i18n="cake3Title">Cream with gold</h3>
-              <p data-i18n="cake3Desc">Neat cream décor and golden pearls.</p>
+              <h3 data-i18n="cake1Title">Birthday with gold</h3>
+              <p data-i18n="cake1Desc">White cream, gold accents, and custom numbers.</p>
             </div>
           </article>
           <article class="cake-card">
             <div class="cake-photo">
-              <img src="images/cake-04-berry-cut.jpg" data-i18n-alt="cake4Alt" alt="Berry-filled cake cut open" width="1050" height="1400" loading="lazy" />
+              <img src="images/cake-02.jpg" data-i18n-alt="cake2Alt" alt="Celebration cake with chocolate number 65" width="1050" height="1400" loading="lazy" />
             </div>
             <div class="cake-info">
-              <h3 data-i18n="cake4Title">Berry</h3>
-              <p data-i18n="cake4Desc">Light sponge and rich berry filling.</p>
+              <h3 data-i18n="cake2Title">Jubilee cake</h3>
+              <p data-i18n="cake2Desc">Cream décor with chocolate details for a special day.</p>
             </div>
           </article>
           <article class="cake-card">
             <div class="cake-photo">
-              <img src="images/cake-05-birthday.jpg" data-i18n-alt="cake5Alt" alt="Celebration cake with chocolate" width="1050" height="1400" loading="lazy" />
+              <img src="images/cake-03.jpg" data-i18n-alt="cake3Alt" alt="Cake with bright blue glaze and number 67" width="1050" height="1400" loading="lazy" />
             </div>
             <div class="cake-info">
-              <h3 data-i18n="cake5Title">Celebration</h3>
-              <p data-i18n="cake5Desc">For birthdays and jubilees — with your décor.</p>
+              <h3 data-i18n="cake3Title">Blue glaze</h3>
+              <p data-i18n="cake3Desc">Glossy blue topping on soft white cream.</p>
             </div>
           </article>
           <article class="cake-card">
             <div class="cake-photo">
-              <img src="images/cake-06-chocolate.jpg" data-i18n-alt="cake6Alt" alt="Chocolate cake with glaze" width="1050" height="1400" loading="lazy" />
+              <img src="images/cake-04.jpg" data-i18n-alt="cake4Alt" alt="Blue cake cut open with berry filling" width="1050" height="1400" loading="lazy" />
             </div>
             <div class="cake-info">
-              <h3 data-i18n="cake6Title">Chocolate</h3>
-              <p data-i18n="cake6Desc">Rich chocolate and a glossy glaze.</p>
+              <h3 data-i18n="cake4Title">Blue, cut</h3>
+              <p data-i18n="cake4Desc">Layers of sponge, cream, and fresh berries inside.</p>
             </div>
           </article>
           <article class="cake-card">
             <div class="cake-photo">
-              <img src="images/cake-07-classic.jpg" data-i18n-alt="cake7Alt" alt="Classic white cake with pearls" width="1050" height="1400" loading="lazy" />
+              <img src="images/cake-05.jpg" data-i18n-alt="cake5Alt" alt="Chocolate cake with glossy glaze" width="1050" height="1400" loading="lazy" />
             </div>
             <div class="cake-info">
-              <h3 data-i18n="cake7Title">Classic white</h3>
-              <p data-i18n="cake7Desc">Elegant cream with chocolate and gold pearls.</p>
+              <h3 data-i18n="cake5Title">Chocolate</h3>
+              <p data-i18n="cake5Desc">Rich chocolate and a glossy finish.</p>
             </div>
           </article>
           <article class="cake-card">
             <div class="cake-photo">
-              <img src="images/cake-01-strawberry.jpg" data-i18n-alt="cake1Alt" alt="Strawberry cake with fresh berries and mint" width="1050" height="1400" loading="lazy" />
+              <img src="images/cake-06.jpg" data-i18n-alt="cake6Alt" alt="Classic white cake with chocolate and gold pearls" width="1050" height="1400" loading="lazy" />
             </div>
             <div class="cake-info">
-              <h3 data-i18n="cake1Title">Strawberry</h3>
-              <p data-i18n="cake1Desc">Fresh strawberries, mint, and light cream.</p>
+              <h3 data-i18n="cake6Title">Classic white</h3>
+              <p data-i18n="cake6Desc">Elegant piping with chocolate and gold pearls.</p>
             </div>
           </article>
-          <article class="cake-card cake-card-wide">
+          <article class="cake-card">
             <div class="cake-photo">
-              <img src="images/cake-02-strawberry-cut.jpg" data-i18n-alt="cake2Alt" alt="Strawberry cake cut open" width="1050" height="1400" loading="lazy" />
+              <img src="images/cake-07.jpg" data-i18n-alt="cake7Alt" alt="Cream cake with gold pearl décor" width="1050" height="1400" loading="lazy" />
             </div>
             <div class="cake-info">
-              <h3 data-i18n="cake2Title">Strawberry, cut</h3>
-              <p data-i18n="cake2Desc">Soft sponge, cream, and berry filling.</p>
+              <h3 data-i18n="cake7Title">Cream with gold</h3>
+              <p data-i18n="cake7Desc">Soft cream swags and golden pearls.</p>
+            </div>
+          </article>
+          <article class="cake-card">
+            <div class="cake-photo">
+              <img src="images/cake-08.jpg" data-i18n-alt="cake8Alt" alt="White cake with berry filling cut open" width="1050" height="1400" loading="lazy" />
+            </div>
+            <div class="cake-info">
+              <h3 data-i18n="cake8Title">Cream with gold, cut</h3>
+              <p data-i18n="cake8Desc">Cream décor with a rich berry filling inside.</p>
             </div>
           </article>
         </div>
@@ -206,7 +231,7 @@
   </main>
 
   <footer class="site-footer">
-    <p data-i18n="brand">Cakes by Veronica</p>
+    <p data-i18n="brand">Cakes by Veronika</p>
     <a id="footer-whatsapp" href="https://wa.me/972535314322" target="_blank" rel="noopener noreferrer">WhatsApp</a>
   </footer>
 
